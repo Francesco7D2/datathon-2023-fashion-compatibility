@@ -38,6 +38,7 @@ For a detailed understanding of our methodology and implementation, we welcome a
 - model.py: Our final model for usability
 - modelRFR.pkl: The best model we obtained saved.  
 - presentación_Datathon.pdf: Overview of the project.
+- app.py: DEMO of our solution. 
 
 ## DEMO
 Once we trained our model, we can reuse the model to predict the outfit given an initial product, as demonstrated in the image below.
