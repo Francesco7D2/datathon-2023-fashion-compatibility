@@ -41,9 +41,8 @@ For a detailed understanding of our methodology and implementation, we welcome a
 - app.py: DEMO of our solution. 
 
 ## DEMO
-Once we trained our model, we can reuse the model to predict the outfit given an initial product, as demonstrated in the image below.
+Once we trained our model, we can reuse the model to predict the outfit given an initial product, as demonstrated in the result section.
 
-[IMAGE]
 
 
 
