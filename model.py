@@ -1,8 +1,16 @@
+"""
+File: predictor.py
+Authors: Dante Chaguaceda, Aiman Himi, Adrià Rodriguez, Francesco Tedesco
+Created: November 12, 2023
+Description: This file contains the prediction process of the MANGO challenge in UPC datathon 2023
+"""
+
+
 import numpy as np
 import pandas as pd
 import category_encoders as ce
 
-
+# Define the color data
 colors_rgb = {'OFFWHITE': np.array([250, 249, 246]),
               'TEJANO OSCURO': np.array([52, 63, 81]),
               'ROSA PASTEL': np.array([253,202,225]),
@@ -114,12 +122,34 @@ colors_rgb = {'OFFWHITE': np.array([250, 249, 246]),
               'PRUSIA': np.array([0, 49, 83]),
               'ASFALTO': np.array([24, 24, 24]),
   }
-
+# Normalize the data
 for k, v in colors_rgb.items():
     colors_rgb[k] = v/255
 
 
 class Predictor():
+    """
+    Predictor class for building outfits given a single item of clothing.
+
+    Parameters:
+    - product_dataset_path (str): Path to the product dataset file.
+    - classifier: Classifier model used for predictions.
+
+    Attributes:
+    - raw_dataset (pd.DataFrame): Raw product dataset.
+    - dataset (pd.DataFrame): Processed dataset.
+    - classifier: Classifier model for predictions.
+    - not_with_it_cat (dict): Categories not to be paired together.
+    - not_with_it_type (dict): Types not to be paired together.
+
+    Methods:
+    - __init__: Initialize the Predictor instance.
+    - get_most_similars(row): Get indices of most similar items given a row.
+    - get_img_path_from_prediciton(outfit): Get image paths from a prediction outfit.
+    - get_predictions(row, prediction, n, n_outfits): Generate multiple outfits based on predictions.
+    - predict(id, n_images, n_outfits): Make predictions for outfit images.
+
+    """
     def __init__(self, product_dataset_path: str, classifier):
         self.raw_dataset = pd.read_csv(product_dataset_path)
         self.raw_dataset = self.raw_dataset[self.raw_dataset['des_sex'] == "Female"]
