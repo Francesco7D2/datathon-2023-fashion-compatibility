@@ -31,6 +31,13 @@ By readjusting the conditions to build an outfit, we were able to establish effe
 ## Code
 For a detailed understanding of our methodology and implementation, we welcome any feedback or suggestions.
 
+## Files
+
+- datathon2023_MANGO.ipynb: Jupyter Notebook with preprocessing and training code 
+- model.py: Our final model for usability
+- modelRFR.pkl: The best model we obtained saved.  
+- presentación_Datathon.pdf: Overview of the project. 
+
 ## DEMO
 Once we trained our model, we can reuse the model to predict the outfit given an initial product, as demonstrated in the image below.
 
