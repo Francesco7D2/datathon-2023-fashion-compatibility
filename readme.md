@@ -1,5 +1,7 @@
 # Datathon 2023 UPC MANGO
 
+__Authors:__ Dante Chaguaceda, Aiman Himi, Adrià Rodriguez, Francesco Tedesco 
+
 ## Introduction
 
 The main goal of this challenge is to build a model capable of creating several outfits given a single piece of clothing as input.
