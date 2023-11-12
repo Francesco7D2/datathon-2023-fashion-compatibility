@@ -26,7 +26,8 @@ We then experimented with both neural network and Random Forest Regression for t
 ## Results
 By readjusting the conditions to build an outfit, we were able to establish effective rules for creating stylish outfits, as illustrated below.
 
-[IMAGE]
+![image](https://github.com/Francesco7D2/datathon-2023-fashion-compatibility/assets/108528980/b8e51f49-2203-467f-88c4-dacc48bc4ca6)
+
 
 ## Code
 For a detailed understanding of our methodology and implementation, we welcome any feedback or suggestions.
